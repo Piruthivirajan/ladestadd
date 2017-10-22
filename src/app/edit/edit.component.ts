@@ -31,7 +31,7 @@ export class EditComponent{
       this.addressService.updateAddress(this.model,this.model.id).subscribe(res =>{
         this.model=new Address();
     }); 
-     
+     alert("Updated Successfully");
      this._router.navigateByUrl('/report');
 
     }
