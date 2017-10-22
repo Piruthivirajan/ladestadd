@@ -16,6 +16,10 @@ constructor(private _router: Router,private addressService:AddressService){
   this.router=_router;
 }
 ngOnInit() {
+  if(localStorage.getItem('editedAddress')!=null){
+    alert("Updated Successfully");
+    localStorage.removeItem('editedAddress');
+  }
   this.getDetails();
 }
 getDetails(){
